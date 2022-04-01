@@ -27,7 +27,10 @@ T_45 = [cos(theta5) -sin(theta5) 0 0;
 
 T_05 = simplify(T_01*T_12*T_23*T_34*T_45);
 
-T_NN = [r11 r12 r13 px; r21 r22 r23 py; r31 r32 r33 pz; 0 0 0 1];
+T_NN = [r11 r12 r13 px;
+        r21 r22 r23 py;
+        r31 r32 r33 pz;
+        0   0   0   1];
 
 LHS = simplify(inv(T_01)*T_NN)
 RHS = simplify(T_12*T_23*T_34*T_45) 
